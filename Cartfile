@@ -1,0 +1,2 @@
+github "kean/Nuke" "master"
+github "Alamofire/Alamofire" ~> 2.0
