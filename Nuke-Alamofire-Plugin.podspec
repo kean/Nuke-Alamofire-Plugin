@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.watchos.deployment_target = "2.0"
     s.osx.deployment_target = "10.9"
 
-    s.dependency "Nuke/Core"
+    s.dependency "Nuke"
     s.dependency "Alamofire", "~> 2.0"
 
     s.source_files  = "Source/**/*"
