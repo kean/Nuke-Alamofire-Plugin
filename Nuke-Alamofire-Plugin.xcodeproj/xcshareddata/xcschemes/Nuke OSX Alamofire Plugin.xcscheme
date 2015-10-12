@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0CD205BE1BCC688800B88F70"
-               BuildableName = "NukeAlamofirePlugin.framework"
-               BlueprintName = "Nuke watchOS Alamofire Plugin"
+               BlueprintIdentifier = "0CD205D11BCC693F00B88F70"
+               BuildableName = "Nuke OSX Alamofire Plugin.framework"
+               BlueprintName = "Nuke OSX Alamofire Plugin"
                ReferencedContainer = "container:Nuke-Alamofire-Plugin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0CD205BE1BCC688800B88F70"
-            BuildableName = "NukeAlamofirePlugin.framework"
-            BlueprintName = "Nuke watchOS Alamofire Plugin"
+            BlueprintIdentifier = "0CD205D11BCC693F00B88F70"
+            BuildableName = "Nuke OSX Alamofire Plugin.framework"
+            BlueprintName = "Nuke OSX Alamofire Plugin"
             ReferencedContainer = "container:Nuke-Alamofire-Plugin.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0CD205BE1BCC688800B88F70"
-            BuildableName = "NukeAlamofirePlugin.framework"
-            BlueprintName = "Nuke watchOS Alamofire Plugin"
+            BlueprintIdentifier = "0CD205D11BCC693F00B88F70"
+            BuildableName = "Nuke OSX Alamofire Plugin.framework"
+            BlueprintName = "Nuke OSX Alamofire Plugin"
             ReferencedContainer = "container:Nuke-Alamofire-Plugin.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
