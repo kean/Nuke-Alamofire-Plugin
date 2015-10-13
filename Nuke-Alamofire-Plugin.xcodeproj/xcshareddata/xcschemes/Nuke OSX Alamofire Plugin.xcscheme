@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0CD205D11BCC693F00B88F70"
-               BuildableName = "Nuke OSX Alamofire Plugin.framework"
+               BuildableName = "NukeAlamofirePlugin.framework"
                BlueprintName = "Nuke OSX Alamofire Plugin"
                ReferencedContainer = "container:Nuke-Alamofire-Plugin.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CD205D11BCC693F00B88F70"
-            BuildableName = "Nuke OSX Alamofire Plugin.framework"
+            BuildableName = "NukeAlamofirePlugin.framework"
             BlueprintName = "Nuke OSX Alamofire Plugin"
             ReferencedContainer = "container:Nuke-Alamofire-Plugin.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0CD205D11BCC693F00B88F70"
-            BuildableName = "Nuke OSX Alamofire Plugin.framework"
+            BuildableName = "NukeAlamofirePlugin.framework"
             BlueprintName = "Nuke OSX Alamofire Plugin"
             ReferencedContainer = "container:Nuke-Alamofire-Plugin.xcodeproj">
          </BuildableReference>

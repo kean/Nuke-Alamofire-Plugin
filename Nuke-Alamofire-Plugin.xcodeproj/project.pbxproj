@@ -7,15 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C8D255C1BCC33BE0029A841 /* Nuke-Alamofire-Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8D255B1BCC33BE0029A841 /* Nuke-Alamofire-Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C8D25611BCC33DA0029A841 /* AlamofireImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */; settings = {ASSET_TAGS = (); }; };
 		0C8D25631BCC35770029A841 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8D25621BCC35770029A841 /* Nuke.framework */; };
 		0C8D25651BCC35800029A841 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8D25641BCC35800029A841 /* Alamofire.framework */; };
-		0CD205C71BCC68B900B88F70 /* Nuke-Alamofire-Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8D255B1BCC33BE0029A841 /* Nuke-Alamofire-Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0CD205C81BCC68E300B88F70 /* AlamofireImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */; settings = {ASSET_TAGS = (); }; };
 		0CD205CA1BCC68F500B88F70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD205C91BCC68F500B88F70 /* Alamofire.framework */; };
 		0CD205CC1BCC68FE00B88F70 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD205CB1BCC68FE00B88F70 /* Nuke.framework */; };
-		0CD205DA1BCC697F00B88F70 /* Nuke-Alamofire-Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8D255B1BCC33BE0029A841 /* Nuke-Alamofire-Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0CD205DB1BCC697F00B88F70 /* AlamofireImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */; settings = {ASSET_TAGS = (); }; };
 		0CD205DD1BCC699100B88F70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD205DC1BCC699100B88F70 /* Alamofire.framework */; };
 		0CD205DF1BCC699A00B88F70 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD205DE1BCC699A00B88F70 /* Nuke.framework */; };
@@ -23,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		0C8D254F1BCC33730029A841 /* NukeAlamofirePlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAlamofirePlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C8D255B1BCC33BE0029A841 /* Nuke-Alamofire-Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Nuke-Alamofire-Plugin.h"; sourceTree = "<group>"; };
 		0C8D255E1BCC33C40029A841 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImageDataLoader.swift; sourceTree = "<group>"; };
 		0C8D25621BCC35770029A841 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
@@ -90,7 +86,6 @@
 		0C8D255A1BCC33BE0029A841 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				0C8D255B1BCC33BE0029A841 /* Nuke-Alamofire-Plugin.h */,
 				0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */,
 			);
 			path = Source;
@@ -124,7 +119,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C8D255C1BCC33BE0029A841 /* Nuke-Alamofire-Plugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +126,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD205C71BCC68B900B88F70 /* Nuke-Alamofire-Plugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +133,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD205DA1BCC697F00B88F70 /* Nuke-Alamofire-Plugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +541,7 @@
 				0CD205C51BCC688800B88F70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CD205D71BCC693F00B88F70 /* Build configuration list for PBXNativeTarget "Nuke OSX Alamofire Plugin" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +550,7 @@
 				0CD205D91BCC693F00B88F70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
