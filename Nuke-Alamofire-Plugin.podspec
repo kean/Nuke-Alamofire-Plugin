@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     s.osx.deployment_target = "10.9"
 
     s.dependency "Nuke"
-    s.dependency "Alamofire", "~> 2.0"
+    s.dependency "Alamofire", "~> 3.0"
 
     s.source_files  = "Source/**/*"
 end
