@@ -9,12 +9,12 @@ if [ -z "$new_version" ]; then
 	exit 1
 fi
 
-if [ ! -d "$plist" ]; then
+if [ ! -f "$plist" ]; then
     echo "ERROR: $plist not found"
 	exit  1
 fi
 
-if [ ! -d "$podspec" ]; then
+if [ ! -f "$podspec" ]; then
     echo "ERROR: $podspec not found"
 	exit  1
 fi
@@ -35,7 +35,7 @@ rm "$podspec.backup"
 
 echo "Creating release commit"
 git add --all
-git commit -m "Release version $new_version"
+git commit -m "Version $new_version"
 git push
 
 
