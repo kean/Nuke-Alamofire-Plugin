@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C8D25611BCC33DA0029A841 /* AlamofireImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */; settings = {ASSET_TAGS = (); }; };
+		0C6A2EDA1BDAA40300765F15 /* AlamofireImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */; };
+		0C8D25611BCC33DA0029A841 /* AlamofireImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */; };
 		0C8D25631BCC35770029A841 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8D25621BCC35770029A841 /* Nuke.framework */; };
 		0C8D25651BCC35800029A841 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8D25641BCC35800029A841 /* Alamofire.framework */; };
-		0CD205C81BCC68E300B88F70 /* AlamofireImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */; settings = {ASSET_TAGS = (); }; };
+		0CD205C81BCC68E300B88F70 /* AlamofireImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */; };
 		0CD205CA1BCC68F500B88F70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD205C91BCC68F500B88F70 /* Alamofire.framework */; };
 		0CD205CC1BCC68FE00B88F70 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD205CB1BCC68FE00B88F70 /* Nuke.framework */; };
-		0CD205DB1BCC697F00B88F70 /* AlamofireImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */; settings = {ASSET_TAGS = (); }; };
+		0CD205DB1BCC697F00B88F70 /* AlamofireImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */; };
 		0CD205DD1BCC699100B88F70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD205DC1BCC699100B88F70 /* Alamofire.framework */; };
 		0CD205DF1BCC699A00B88F70 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD205DE1BCC699A00B88F70 /* Nuke.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C6A2ED21BDAA3C700765F15 /* NukeAlamofirePlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAlamofirePlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8D254F1BCC33730029A841 /* NukeAlamofirePlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAlamofirePlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8D255E1BCC33C40029A841 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImageDataLoader.swift; sourceTree = "<group>"; };
@@ -33,6 +35,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0C6A2ECE1BDAA3C700765F15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C8D254B1BCC33730029A841 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,6 +88,7 @@
 				0C8D254F1BCC33730029A841 /* NukeAlamofirePlugin.framework */,
 				0CD205BF1BCC688800B88F70 /* NukeAlamofirePlugin.framework */,
 				0CD205D21BCC693F00B88F70 /* NukeAlamofirePlugin.framework */,
+				0C6A2ED21BDAA3C700765F15 /* NukeAlamofirePlugin.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +125,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0C6A2ECF1BDAA3C700765F15 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C8D254C1BCC33730029A841 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +156,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0C6A2ED11BDAA3C700765F15 /* Nuke tvOS Alamofire Plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C6A2ED91BDAA3C700765F15 /* Build configuration list for PBXNativeTarget "Nuke tvOS Alamofire Plugin" */;
+			buildPhases = (
+				0C6A2ECD1BDAA3C700765F15 /* Sources */,
+				0C6A2ECE1BDAA3C700765F15 /* Frameworks */,
+				0C6A2ECF1BDAA3C700765F15 /* Headers */,
+				0C6A2ED01BDAA3C700765F15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nuke tvOS Alamofire Plugin";
+			productName = "Nuke tvOS Alamofire Plugin";
+			productReference = 0C6A2ED21BDAA3C700765F15 /* NukeAlamofirePlugin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		0C8D254E1BCC33730029A841 /* Nuke iOS Alamofire Plugin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C8D25571BCC33730029A841 /* Build configuration list for PBXNativeTarget "Nuke iOS Alamofire Plugin" */;
@@ -203,6 +238,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Alexander Grebenyuk";
 				TargetAttributes = {
+					0C6A2ED11BDAA3C700765F15 = {
+						CreatedOnToolsVersion = 7.1;
+					};
 					0C8D254E1BCC33730029A841 = {
 						CreatedOnToolsVersion = 7.0.1;
 					};
@@ -229,11 +267,19 @@
 				0C8D254E1BCC33730029A841 /* Nuke iOS Alamofire Plugin */,
 				0CD205BE1BCC688800B88F70 /* Nuke watchOS Alamofire Plugin */,
 				0CD205D11BCC693F00B88F70 /* Nuke OSX Alamofire Plugin */,
+				0C6A2ED11BDAA3C700765F15 /* Nuke tvOS Alamofire Plugin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0C6A2ED01BDAA3C700765F15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C8D254D1BCC33730029A841 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,6 +304,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0C6A2ECD1BDAA3C700765F15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C6A2EDA1BDAA40300765F15 /* AlamofireImageDataLoader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C8D254A1BCC33730029A841 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +339,44 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		0C6A2ED71BDAA3C700765F15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Nuke tvOS Alamofire Plugin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kean.Nuke-tvOS-Alamofire-Plugin";
+				PRODUCT_NAME = NukeAlamofirePlugin;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		0C6A2ED81BDAA3C700765F15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Nuke tvOS Alamofire Plugin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kean.Nuke-tvOS-Alamofire-Plugin";
+				PRODUCT_NAME = NukeAlamofirePlugin;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		0C8D25551BCC33730029A841 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -518,6 +610,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0C6A2ED91BDAA3C700765F15 /* Build configuration list for PBXNativeTarget "Nuke tvOS Alamofire Plugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C6A2ED71BDAA3C700765F15 /* Debug */,
+				0C6A2ED81BDAA3C700765F15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		0C8D25491BCC33730029A841 /* Build configuration list for PBXProject "Nuke-Alamofire-Plugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
