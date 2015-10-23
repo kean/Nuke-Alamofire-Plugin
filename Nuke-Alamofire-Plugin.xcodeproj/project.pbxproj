@@ -17,6 +17,8 @@
 		0CD205DB1BCC697F00B88F70 /* AlamofireImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8D25601BCC33DA0029A841 /* AlamofireImageDataLoader.swift */; };
 		0CD205DD1BCC699100B88F70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD205DC1BCC699100B88F70 /* Alamofire.framework */; };
 		0CD205DF1BCC699A00B88F70 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD205DE1BCC699A00B88F70 /* Nuke.framework */; };
+		0CEA58B21BDAB171009330A6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEA58B01BDAB171009330A6 /* Alamofire.framework */; };
+		0CEA58B31BDAB171009330A6 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEA58B11BDAB171009330A6 /* Nuke.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		0CD205D21BCC693F00B88F70 /* NukeAlamofirePlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAlamofirePlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CD205DC1BCC699100B88F70 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		0CD205DE1BCC699A00B88F70 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/Mac/Nuke.framework; sourceTree = "<group>"; };
+		0CEA58B01BDAB171009330A6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
+		0CEA58B11BDAB171009330A6 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/tvOS/Nuke.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CEA58B21BDAB171009330A6 /* Alamofire.framework in Frameworks */,
+				0CEA58B31BDAB171009330A6 /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +118,8 @@
 		0C8D25661BCC35880029A841 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CEA58B01BDAB171009330A6 /* Alamofire.framework */,
+				0CEA58B11BDAB171009330A6 /* Nuke.framework */,
 				0CD205DE1BCC699A00B88F70 /* Nuke.framework */,
 				0CD205DC1BCC699100B88F70 /* Alamofire.framework */,
 				0CD205CB1BCC68FE00B88F70 /* Nuke.framework */,
@@ -342,11 +350,16 @@
 		0C6A2ED71BDAA3C700765F15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Nuke tvOS Alamofire Plugin/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kean.Nuke-tvOS-Alamofire-Plugin";
@@ -361,11 +374,16 @@
 		0C6A2ED81BDAA3C700765F15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Nuke tvOS Alamofire Plugin/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kean.Nuke-tvOS-Alamofire-Plugin";
@@ -471,6 +489,7 @@
 		0C8D25581BCC33730029A841 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -494,6 +513,7 @@
 		0C8D25591BCC33730029A841 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -562,6 +582,7 @@
 		0CD205D81BCC693F00B88F70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -586,6 +607,7 @@
 		0CD205D91BCC693F00B88F70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -617,6 +639,7 @@
 				0C6A2ED81BDAA3C700765F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C8D25491BCC33730029A841 /* Build configuration list for PBXProject "Nuke-Alamofire-Plugin" */ = {
 			isa = XCConfigurationList;
