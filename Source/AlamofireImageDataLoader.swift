@@ -15,11 +15,11 @@ public class AlamofireImageDataLoader: ImageDataLoading {
     
     // MARK: ImageDataLoading
         
-    public func imageDataTaskWithRequest(request: ImageRequest, progressHandler: ImageDataLoadingProgressHandler, completionHandler: ImageDataLoadingCompletionHandler) -> NSURLSessionTask {
+    public func taskWith(request: ImageRequest, progress: ImageDataLoadingProgress, completion: ImageDataLoadingCompletion) -> NSURLSessionTask {
         let task = self.manager.request(request.URLRequest).response { (_, response, data, error) -> Void in
-            completionHandler(data: data, response: response, error: error)
+            completion(data: data, response: response, error: error)
         }.progress { (_, totalBytesReceived, totalBytesExpected) -> Void in
-            progressHandler(completedUnitCount: totalBytesReceived, totalUnitCount: totalBytesExpected)
+            progress(completedUnitCount: totalBytesReceived, totalUnitCount: totalBytesExpected)
         }
         return task.task
     }
