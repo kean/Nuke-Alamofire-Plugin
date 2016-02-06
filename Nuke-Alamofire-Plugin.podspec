@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "Nuke-Alamofire-Plugin"
-    s.version          = "0.3.0"
+    s.version          = "0.4.0"
     s.summary          = "Alamofire plugin for Nuke - image managing framework"
 
     s.homepage         = "https://github.com/kean/Nuke-Alamofire-Plugin"
