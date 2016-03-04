@@ -10,6 +10,7 @@ public class AlamofireImageDataLoader: ImageDataLoading {
     public let manager: Alamofire.Manager
     
     public init(manager: Alamofire.Manager = Alamofire.Manager.sharedInstance) {
+        manager.startRequestsImmediately = false
         self.manager = manager
     }
     
