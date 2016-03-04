@@ -1,6 +1,6 @@
-<p align="center"><img src="https://cloud.githubusercontent.com/assets/1567433/10440878/a7c6e468-714b-11e5-9b12-baef482c37c1.png" height="100"/>
+<p align="left"><img src="https://cloud.githubusercontent.com/assets/1567433/13362579/7001aa94-dcd6-11e5-8c0d-5a4920008d04.png" height="150"/>
 
-<p align="center">
+<p align="left">
 <a href="https://cocoapods.org"><img src="https://img.shields.io/cocoapods/v/Nuke-Alamofire-Plugin.svg"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 </p>
@@ -20,9 +20,44 @@ let configuration = ImageManagerConfiguration(dataLoader: dataLoader, decoder: d
 ImageManager.shared = ImageManager(configuration: configuration)
 ```
 
+#### Image Data Loader
+
+```swift
+// Create with shared Alamofire.Manager
+let _ = AlamofireImageDataLoader()
+
+// Create with concrete Alamofire.Manager
+let _ = AlamofireImageDataLoader(manager: <#AlamofireManager#>)
+
+// Create with NSURLSessionConfiguration
+let _ = AlamofireImageDataLoader(configuration: <#NSURLSessionConfiguration#>)
+```
+
+## Considerations
+
+`AlamofireImageDataLoader` disables `startRequestsImmediately` option of an `Alamofire.Manager` that it was initialized with.
+
 ## Installation
 
-See [Nuke](https://github.com/kean/Nuke) for installation instructions.
+### [CocoaPods](http://cocoapods.org)
+
+To install plugin add a dependency to your Podfile:
+
+```ruby
+# source 'https://github.com/CocoaPods/Specs.git'
+# use_frameworks!
+# platform :ios, "8.0" / :watchos, "2.0" / :osx, "10.9" / :tvos, "9.0"
+
+pod "Nuke-Alamofire-Plugin"
+```
+
+### [Carthage](https://github.com/Carthage/Carthage)
+
+To install plugin add a dependency to your Cartfile:
+
+```
+github "kean/Nuke-Alamofire-Plugin"
+```
 
 ## Requirements
 - iOS 8.0+ / watchOS 2.0+ / OS X 10.9+
