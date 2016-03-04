@@ -22,6 +22,15 @@ public class AlamofireImageDataLoader: ImageDataLoading {
         manager.startRequestsImmediately = false
         self.manager = manager
     }
+
+    /**
+     Initializes the receiver with a Alamofire.Manager created with a given session configuration.
+
+     - warning: The receiver sets of the Alamofire.Manager startRequestsImmediately to false.
+     */
+    public convenience init(configuration: NSURLSessionConfiguration) {
+        self.init(manager: Alamofire.Manager(configuration: configuration))
+    }
     
     // MARK: ImageDataLoading
 
