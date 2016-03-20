@@ -1,6 +1,6 @@
-<p align="left"><img src="https://cloud.githubusercontent.com/assets/1567433/13362579/7001aa94-dcd6-11e5-8c0d-5a4920008d04.png" height="150"/>
+<p align="center"><img src="https://cloud.githubusercontent.com/assets/1567433/13362579/7001aa94-dcd6-11e5-8c0d-5a4920008d04.png" height="150"/>
 
-<p align="left">
+<p align="center">
 <a href="https://cocoapods.org"><img src="https://img.shields.io/cocoapods/v/Nuke-Alamofire-Plugin.svg"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 </p>
