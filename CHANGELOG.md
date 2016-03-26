@@ -1,5 +1,9 @@
  [Changelog](https://github.com/kean/Nuke-Alamofire-Plugin/releases) for all versions
 
+## Nuke Alamofire Plugin 0.6
+
+- Udpate for Nuke 3.0+
+
 ## Nuke Alamofire Plugin 0.5
 
 - **[Breaking Change]** #2 Disable `startRequestsImmediately` on `Alamofire.Manager`, this change is required by `Nuke` in order to limit number of concurrent tasks
