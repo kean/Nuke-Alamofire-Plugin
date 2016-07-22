@@ -8,7 +8,7 @@ import Nuke
 
 /** Implements image data loading using Alamofire framework.
  */
-public class AlamofireImageDataLoader: ImageDataLoading {
+public class AlamofireImageDataLoader: Nuke.DataLoading {
     /** The Alamofire.Manager that the receiver was initialized with.
      */
     public let manager: Alamofire.Manager
@@ -28,32 +28,24 @@ public class AlamofireImageDataLoader: ImageDataLoading {
 
      - warning: The receiver sets of the Alamofire.Manager startRequestsImmediately to false.
      */
-    public convenience init(configuration: NSURLSessionConfiguration) {
+    public convenience init(configuration: URLSessionConfiguration) {
         self.init(manager: Alamofire.Manager(configuration: configuration))
     }
     
-    // MARK: ImageDataLoading
+    // MARK: DataLoading
 
     /** Creates a request using Alamofire.Manager and returns an NSURLSessionTask which is managed by Alamofire.Manager.
      */
-    public func taskWith(request: ImageRequest, progress: ImageDataLoadingProgress, completion: ImageDataLoadingCompletion) -> NSURLSessionTask {
-        let task = self.manager.request(request.URLRequest).response { (_, response, data, error) -> Void in
-            completion(data: data, response: response, error: error)
+    public func loadData(for urlRequest: URLRequest, progress: Nuke.DataLoadingProgress, completion: Nuke.DataLoadingCompletion) -> URLSessionTask {
+        let task = self.manager.request(urlRequest).response { _, response, data, error in
+            if let data = data, let response: URLResponse = response {
+                completion(result: .success((data, response)))
+            } else {
+                completion(result: .failure(error ?? NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil)))
+            }
         }.progress { (_, totalBytesReceived, totalBytesExpected) -> Void in
             progress(completed: totalBytesReceived, total: totalBytesExpected)
         }
         return task.task
-    }
-
-    /** Invalidates NSURLSession that Alamofire.Manager was initializd with.
-     */
-    public func invalidate() {
-        self.manager.session.invalidateAndCancel()
-    }
-
-    /** Removes all cached responses from NSURLSession's URL cache.
-     */
-    public func removeAllCachedImages() {
-        self.manager.session.configuration.URLCache?.removeAllCachedResponses()
     }
 }
