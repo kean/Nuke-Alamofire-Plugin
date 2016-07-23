@@ -36,7 +36,7 @@ public class AlamofireImageDataLoader: Nuke.DataLoading {
     /** Creates a request using Alamofire.Manager and returns an NSURLSessionTask which is managed by Alamofire.Manager.
      */
     public func loadData(for request: URLRequest, progress: Nuke.DataLoadingProgress, completion: Nuke.DataLoadingCompletion) -> Cancellable {
-        let task = self.manager.request(urlRequest).response { _, response, data, error in
+        let task = self.manager.request(request).response { _, response, data, error in
             if let data = data, let response: URLResponse = response {
                 completion(result: .success((data, response)))
             } else {
