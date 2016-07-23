@@ -19,7 +19,6 @@ public class AlamofireImageDataLoader: Nuke.DataLoading {
      - warning: The receiver sets of the Alamofire.Manager startRequestsImmediately to false.
      */
     public init(manager: Alamofire.Manager = Alamofire.Manager.sharedInstance) {
-        manager.startRequestsImmediately = false
         self.manager = manager
     }
 
@@ -36,7 +35,7 @@ public class AlamofireImageDataLoader: Nuke.DataLoading {
 
     /** Creates a request using Alamofire.Manager and returns an NSURLSessionTask which is managed by Alamofire.Manager.
      */
-    public func loadData(for urlRequest: URLRequest, progress: Nuke.DataLoadingProgress, completion: Nuke.DataLoadingCompletion) -> URLSessionTask {
+    public func loadData(for urlRequest: URLRequest, progress: Nuke.DataLoadingProgress, completion: Nuke.DataLoadingCompletion) -> Cancellable {
         let task = self.manager.request(urlRequest).response { _, response, data, error in
             if let data = data, let response: URLResponse = response {
                 completion(result: .success((data, response)))
@@ -49,3 +48,5 @@ public class AlamofireImageDataLoader: Nuke.DataLoading {
         return task.task
     }
 }
+
+extension Alamofire.Request: Nuke.Cancellable {}
