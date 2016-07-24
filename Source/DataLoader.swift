@@ -35,12 +35,12 @@ public class DataLoader: Nuke.DataLoading {
     
     /** Creates a request using Alamofire.Manager and returns an NSURLSessionTask which is managed by Alamofire.Manager.
      */
-    public func loadData(for request: URLRequest, progress: Nuke.DataLoadingProgress? = nil, completion: Nuke.DataLoadingCompletion) -> Cancellable {
+    public func loadData(for request: URLRequest, progress: Nuke.DataLoadingProgress? = nil, completion: Nuke.DataLoadingCompletion) -> Nuke.Cancellable {
         let task = self.manager.request(request).response { _, response, data, error in
             if let data = data, let response: URLResponse = response {
                 completion(result: .success((data, response)))
             } else {
-                completion(result: .failure(error ?? NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil)))
+                completion(result: .failure(Nuke.AnyError(error ?? NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil))))
             }
             }.progress { (_, totalBytesReceived, totalBytesExpected) -> Void in
                 progress?(completed: totalBytesReceived, total: totalBytesExpected)
