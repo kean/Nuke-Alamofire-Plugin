@@ -6,47 +6,40 @@ import Foundation
 import Alamofire
 import Nuke
 
-/** Implements image data loading using Alamofire framework.
- */
-public class DataLoader: Nuke.DataLoading {
-    /** The Alamofire.Manager that the receiver was initialized with.
-     */
-    public let manager: Alamofire.Manager
-    
-    /**
-     Initializes the receiver with a given Alamofire.Manager. Default value is Alamofire.Manager.sharedInstance.
-     
-     - warning: The receiver sets of the Alamofire.Manager startRequestsImmediately to false.
-     */
-    public init(manager: Alamofire.Manager = Alamofire.Manager.sharedInstance) {
+/// Implements image data loading using Alamofire framework.
+open class DataLoader: Nuke.DataLoading {
+    /// The Alamofire.SessionManager that the receiver was initialized with.
+    public let manager: Alamofire.SessionManager
+
+    private let scheduler: Nuke.AsyncScheduler
+
+    /// Initializes the receiver with a given Alamofire.SessionManager.
+    /// - parameter manager: Alamofire.SessionManager.default by default.
+    /// - parameter scheduler: `QueueScheduler` with `maxConcurrentOperationCount` 8 by default.
+    public init(manager: Alamofire.SessionManager = Alamofire.SessionManager.default, scheduler: Nuke.AsyncScheduler = QueueScheduler(maxConcurrentOperationCount: 8)) {
         self.manager = manager
+        self.scheduler = scheduler
     }
-    
-    /**
-     Initializes the receiver with a Alamofire.Manager created with a given session configuration.
-     
-     - warning: The receiver sets of the Alamofire.Manager startRequestsImmediately to false.
-     */
-    public convenience init(configuration: URLSessionConfiguration) {
-        self.init(manager: Alamofire.Manager(configuration: configuration))
-    }
-    
+
     // MARK: DataLoading
     
-    /** Creates a request using Alamofire.Manager and returns an NSURLSessionTask which is managed by Alamofire.Manager.
-     */
-    public func loadData(for request: URLRequest, progress: Nuke.DataLoadingProgress? = nil, completion: Nuke.DataLoadingCompletion) -> Nuke.Cancellable {
-        let task = self.manager.request(request).response { _, response, data, error in
-            if let data = data, let response: URLResponse = response {
-                completion(result: .success((data, response)))
-            } else {
-                completion(result: .failure(Nuke.AnyError(error ?? NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil))))
+    /// Loads data using Alamofire.SessionManager.
+    public func loadData(with request: URLRequest, token: Nuke.CancellationToken?) -> Nuke.Promise<(Data, URLResponse)> {
+        return Promise() { fulfill, reject in
+            scheduler.execute(token: token) { finish in
+                let task = self.manager.request(request).response { _, response, data, error in
+                    if let data = data, let response: URLResponse = response {
+                        fulfill((data, response))
+                    } else {
+                        reject(error ?? NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil))
+                    }
+                }
+                token?.register {
+                    task.cancel()
+                    finish()
+                }
+                task.resume()
             }
-            }.progress { (_, totalBytesReceived, totalBytesExpected) -> Void in
-                progress?(completed: totalBytesReceived, total: totalBytesExpected)
         }
-        return task.task
     }
 }
-
-extension Alamofire.Request: Nuke.Cancellable {}

@@ -1,2 +1,2 @@
-github "kean/Nuke" "nuke4"
+github "kean/Nuke" "master"
 github "Alamofire/Alamofire" "swift3"
