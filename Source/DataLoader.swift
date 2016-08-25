@@ -16,7 +16,7 @@ open class DataLoader: Nuke.DataLoading {
     /// Initializes the receiver with a given Alamofire.SessionManager.
     /// - parameter manager: Alamofire.SessionManager.default by default.
     /// - parameter scheduler: `QueueScheduler` with `maxConcurrentOperationCount` 8 by default.
-    public init(manager: Alamofire.SessionManager = Alamofire.SessionManager.default, scheduler: Nuke.AsyncScheduler = QueueScheduler(maxConcurrentOperationCount: 8)) {
+    public init(manager: Alamofire.SessionManager = Alamofire.SessionManager.default, scheduler: Nuke.AsyncScheduler = Nuke.OperationQueueScheduler(maxConcurrentOperationCount: 8)) {
         self.manager = manager
         self.scheduler = scheduler
     }
