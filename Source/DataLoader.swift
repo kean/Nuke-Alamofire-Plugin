@@ -33,6 +33,7 @@ open class DataLoader: Nuke.DataLoading {
                     } else {
                         reject(error ?? NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil))
                     }
+                    finish()
                 }
                 token?.register {
                     task.cancel()
