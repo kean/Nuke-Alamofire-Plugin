@@ -6,11 +6,9 @@ import Foundation
 import Alamofire
 import Nuke
 
-/// Implements image data loading using Alamofire framework.
-open class DataLoader: Nuke.DataLoading {
-    /// The Alamofire.SessionManager that the receiver was initialized with.
+/// Implements data loading using Alamofire framework.
+public class DataLoader: Nuke.DataLoading {
     public let manager: Alamofire.SessionManager
-
     private let scheduler: Nuke.AsyncScheduler
 
     /// Initializes the receiver with a given Alamofire.SessionManager.

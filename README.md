@@ -9,33 +9,12 @@
 
 ## Usage
 
-#### Create Image Manager
-
 ```swift
-let dataLoader: ImageDataLoading = AlamofireImageDataLoader(manager: <#AlamofireManager#>)
-let decoder: ImageDecoding = <#decoder#>
-let cache: ImageMemoryCaching = <#cache#>
+let loader = Nuke.Loader(loader: NukeAlamofirePlugin.DataLoader(), decoder: Nuke.DataDecoder(), cache: Cache.shared)
+let manager = Nuke.Manager(loader: loader, cache: Cache.shared)
 
-let configuration = ImageManagerConfiguration(dataLoader: dataLoader, decoder: decoder, cache: cache)
-ImageManager.shared = ImageManager(configuration: configuration)
+manager.loadImage(with: URL(string: "http://...")!, into: imageView)
 ```
-
-#### Image Data Loader
-
-```swift
-// Create with shared Alamofire.Manager
-let _ = AlamofireImageDataLoader()
-
-// Create with concrete Alamofire.Manager
-let _ = AlamofireImageDataLoader(manager: <#AlamofireManager#>)
-
-// Create with NSURLSessionConfiguration
-let _ = AlamofireImageDataLoader(configuration: <#NSURLSessionConfiguration#>)
-```
-
-## Considerations
-
-`AlamofireImageDataLoader` disables `startRequestsImmediately` option of an `Alamofire.Manager` that it was initialized with.
 
 ## Installation
 
