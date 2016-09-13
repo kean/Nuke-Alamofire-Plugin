@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     s.osx.deployment_target = "10.11"
     s.tvos.deployment_target = "9.0"
 
-    s.dependency "Nuke", "~> 3.0"
+    s.dependency "Nuke"
     s.dependency "Alamofire"
 
     s.source_files  = "Source/**/*"
