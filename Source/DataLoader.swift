@@ -25,14 +25,14 @@ public class DataLoader: Nuke.DataLoading {
     public func loadData(with request: URLRequest, token: Nuke.CancellationToken?) -> Nuke.Promise<(Data, URLResponse)> {
         return Promise() { fulfill, reject in
             scheduler.execute(token: token) { finish in
-                let task = self.manager.request(request).response { _, response, data, error in
-                    if let data = data, let response: URLResponse = response {
+                let task = self.manager.request(request).response(completionHandler: { (response) in
+                    if let data = response.data, let response: URLResponse = response.response {
                         fulfill((data, response))
                     } else {
-                        reject(error ?? NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil))
+                        reject(response.error ?? NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil))
                     }
                     finish()
-                }
+                })
                 token?.register {
                     task.cancel()
                     finish()
