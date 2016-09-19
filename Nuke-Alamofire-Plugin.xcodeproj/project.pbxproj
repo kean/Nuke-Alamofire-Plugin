@@ -248,6 +248,7 @@
 				TargetAttributes = {
 					0C6A2ED11BDAA3C700765F15 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 					};
 					0C8D254E1BCC33730029A841 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -255,9 +256,11 @@
 					};
 					0CD205BE1BCC688800B88F70 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 					};
 					0CD205D11BCC693F00B88F70 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -368,6 +371,7 @@
 				PRODUCT_NAME = NukeAlamofirePlugin;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -393,6 +397,7 @@
 				PRODUCT_NAME = NukeAlamofirePlugin;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -565,6 +570,7 @@
 				PRODUCT_NAME = NukeAlamofirePlugin;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -590,6 +596,7 @@
 				PRODUCT_NAME = NukeAlamofirePlugin;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -617,6 +624,7 @@
 				PRODUCT_NAME = NukeAlamofirePlugin;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -642,6 +650,7 @@
 				PRODUCT_NAME = NukeAlamofirePlugin;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
