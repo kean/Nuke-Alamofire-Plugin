@@ -15,7 +15,7 @@ The plugin adds a `DataLoader` class that uses `Alamofire.SessionManager` for ne
 let loader = Nuke.Loader(loader: NukeAlamofirePlugin.DataLoader(), decoder: Nuke.DataDecoder(), cache: Cache.shared)
 let manager = Nuke.Manager(loader: loader, cache: Cache.shared)
 
-manager.loadImage(with: URL(string: "http://...")!, into: imageView)
+manager.loadImage(with: url, into: imageView)
 ```
 
 ## Installation

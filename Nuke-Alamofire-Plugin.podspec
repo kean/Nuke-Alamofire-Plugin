@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
     s.module_name = "NukeAlamofirePlugin"
 
-    s.dependency 'Nuke'
+    s.dependency 'Nuke', '~> 4.0'
     s.dependency 'Alamofire', '~> 4.0'
 
     s.source_files  = 'Source/**/*'
