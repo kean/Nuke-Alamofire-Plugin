@@ -1,8 +1,12 @@
  [Changelog](https://github.com/kean/Nuke-Alamofire-Plugin/releases) for all versions
 
+## Nuke Alamofire Plugin 1.0
+
+- Adds support for Swift 3, Nuke 4 and Alamofire 4.
+
 ## Nuke Alamofire Plugin 0.6
 
-- Udpate for Nuke 3.0+
+- Update for Nuke 3.0+
 
 ## Nuke Alamofire Plugin 0.5
 
