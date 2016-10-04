@@ -26,6 +26,7 @@ public class DataLoader: Nuke.DataLoading {
     public func loadData(with request: URLRequest, token: Nuke.CancellationToken?) -> Nuke.Promise<(Data, URLResponse)> {
         return Promise() { fulfill, reject in
             scheduler.execute(token: token) { finish in
+                // Alamofire.SessionManager automatically starts requests as soon as they are created (see `startRequestsImmediately`)
                 let task = self.manager.request(request).response(completionHandler: { (response) in
                     if let data = response.data, let response: URLResponse = response.response {
                         fulfill((data, response))
@@ -38,7 +39,6 @@ public class DataLoader: Nuke.DataLoading {
                     task.cancel()
                     finish()
                 }
-                task.resume()
             }
         }
     }
