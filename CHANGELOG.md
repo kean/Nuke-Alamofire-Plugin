@@ -1,5 +1,9 @@
  [Changelog](https://github.com/kean/Nuke-Alamofire-Plugin/releases) for all versions
 
+## Nuke Alamofire Plugin 1.0.1
+
+- #7 DataLoader no longer resumes Alamofire tasks (they get started automatically by Alamofire)
+
 ## Nuke Alamofire Plugin 1.0
 
 - Adds support for Swift 3, Nuke 4 and Alamofire 4.
