@@ -1,5 +1,9 @@
  [Changelog](https://github.com/kean/Nuke-Alamofire-Plugin/releases) for all versions
 
+## Nuke Alamofire Plugin 2.0
+
+- Updated for Nuke 5
+
 ## Nuke Alamofire Plugin 1.0.1
 
 - #7 DataLoader no longer resumes Alamofire tasks (they get started automatically by Alamofire)
