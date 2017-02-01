@@ -13,9 +13,9 @@ public class DataLoader: Nuke.DataLoading {
 
     /// Initializes the receiver with a given Alamofire.SessionManager.
     /// - parameter manager: Alamofire.SessionManager.default by default.
-    /// - parameter scheduler: `QueueScheduler` with `maxConcurrentOperationCount` 8 by default.
+    /// - parameter scheduler: `QueueScheduler` with `maxConcurrentOperationCount` 6 by default.
     /// Scheduler is wrapped in a `RateLimiter`.
-    public init(manager: Alamofire.SessionManager = Alamofire.SessionManager.default, scheduler: Nuke.AsyncScheduler = Nuke.RateLimiter(scheduler: Nuke.OperationQueueScheduler(maxConcurrentOperationCount: 8))) {
+    public init(manager: Alamofire.SessionManager = Alamofire.SessionManager.default, scheduler: Nuke.AsyncScheduler = Nuke.RateLimiter(scheduler: Nuke.OperationQueueScheduler(maxConcurrentOperationCount: 6))) {
         self.manager = manager
         self.scheduler = scheduler
     }
@@ -23,22 +23,20 @@ public class DataLoader: Nuke.DataLoading {
     // MARK: DataLoading
     
     /// Loads data using Alamofire.SessionManager.
-    public func loadData(with request: URLRequest, token: Nuke.CancellationToken?) -> Nuke.Promise<(Data, URLResponse)> {
-        return Promise() { fulfill, reject in
-            scheduler.execute(token: token) { finish in
-                // Alamofire.SessionManager automatically starts requests as soon as they are created (see `startRequestsImmediately`)
-                let task = self.manager.request(request).response(completionHandler: { (response) in
-                    if let data = response.data, let response: URLResponse = response.response {
-                        fulfill((data, response))
-                    } else {
-                        reject(response.error ?? NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil))
-                    }
-                    finish()
-                })
-                token?.register {
-                    task.cancel()
-                    finish()
+    public func loadData(with request: Nuke.Request, token: CancellationToken?, completion: @escaping (Nuke.Result<(Data, URLResponse)>) -> Void) {
+        scheduler.execute(token: token) { finish in
+            // Alamofire.SessionManager automatically starts requests as soon as they are created (see `startRequestsImmediately`)
+            let task = self.manager.request(request.urlRequest).response(completionHandler: { (response) in
+                if let data = response.data, let response: URLResponse = response.response {
+                    completion(.success((data, response)))
+                } else {
+                    completion(.failure(response.error ?? NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil)))
                 }
+                finish()
+            })
+            token?.register {
+                task.cancel()
+                finish()
             }
         }
     }

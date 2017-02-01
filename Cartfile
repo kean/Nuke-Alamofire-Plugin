@@ -1,2 +1,2 @@
-github "kean/Nuke" ~> 4.0
+github "kean/Nuke" ~> 5.0
 github "Alamofire/Alamofire" ~> 4.0
