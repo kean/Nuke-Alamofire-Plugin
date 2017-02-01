@@ -46,7 +46,7 @@ github "kean/Nuke-Alamofire-Plugin"
 - Swift 3
 
 ## Dependencies
-- [Nuke 4](https://github.com/kean/Nuke)
+- [Nuke 5](https://github.com/kean/Nuke)
 - [Alamofire 4](https://github.com/Alamofire/Alamofire)
 
 ## License
