@@ -1,5 +1,9 @@
  [Changelog](https://github.com/kean/Nuke-Alamofire-Plugin/releases) for all versions
 
+## Nuke Alamofire Plugin 3.0
+
+- Updated for Nuke 6
+
 ## Nuke Alamofire Plugin 2.0
 
 - Updated for Nuke 5
