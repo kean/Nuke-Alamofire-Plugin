@@ -7,7 +7,7 @@ import Alamofire
 import Nuke
 
 /// Implements data loading using Alamofire framework.
-public class DataLoader: Nuke.DataLoading {
+public class ImageDataLoader: Nuke.DataLoading {
     public let manager: Alamofire.SessionManager
 
     /// Initializes the receiver with a given Alamofire.SessionManager.
@@ -19,18 +19,18 @@ public class DataLoader: Nuke.DataLoading {
     // MARK: DataLoading
 
     /// Loads data using Alamofire.SessionManager.
-    public func loadData(with request: URLRequest, token: CancellationToken?, progress: ProgressHandler?, completion: @escaping (Nuke.Result<(Data, URLResponse)>) -> Void) {
+    public func loadData(with request: URLRequest, didReceiveData: @escaping (Data, URLResponse) -> Void, completion: @escaping (Error?) -> Void) -> Cancellable {
         // Alamofire.SessionManager automatically starts requests as soon as they are created (see `startRequestsImmediately`)
-        let task = manager.request(request)
-            .validate()
-            .downloadProgress(closure: { progress?($0.completedUnitCount, $0.totalUnitCount) })
-            .response(completionHandler: { (response) in
-                if let data = response.data, let response: URLResponse = response.response {
-                    completion(.success((data, response)))
-                } else {
-                    completion(.failure(response.error ?? NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil)))
-                }
-            })
-        token?.register { task.cancel() }
+        let task = self.manager.request(request)
+        task.stream { [weak task] data in
+            guard let response = task?.response else { return } // Never nil
+            didReceiveData(data, response)
+        }
+        task.response { response in
+            completion(response.error)
+        }
+        return task
     }
 }
+
+extension Alamofire.DataRequest: Nuke.Cancellable {}
