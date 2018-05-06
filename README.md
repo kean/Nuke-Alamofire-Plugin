@@ -12,7 +12,7 @@
 The plugin adds a `DataLoader` class that uses `Alamofire.SessionManager` for networking.
 
 ```swift
-let loader = Nuke.Loader(loader: NukeAlamofirePlugin.DataLoader())
+let loader = Nuke.Loader(loader: NukeAlamofirePlugin.AlamofireDataLoader())
 let manager = Nuke.Manager(loader: loader, cache: Cache.shared)
 
 manager.loadImage(with: url, into: imageView)
@@ -46,7 +46,7 @@ github "kean/Nuke-Alamofire-Plugin"
 - Swift 4
 
 ## Dependencies
-- [Nuke 6](https://github.com/kean/Nuke)
+- [Nuke 7.0-rc1](https://github.com/kean/Nuke)
 - [Alamofire 4](https://github.com/Alamofire/Alamofire)
 
 ## License

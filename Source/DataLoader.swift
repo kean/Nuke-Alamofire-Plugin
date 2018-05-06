@@ -7,7 +7,7 @@ import Alamofire
 import Nuke
 
 /// Implements data loading using Alamofire framework.
-public class ImageDataLoader: Nuke.DataLoading {
+public class AlamofireDataLoader: Nuke.DataLoading {
     public let manager: Alamofire.SessionManager
 
     /// Initializes the receiver with a given Alamofire.SessionManager.
