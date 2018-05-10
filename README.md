@@ -40,13 +40,13 @@ To install plugin add a dependency to your Cartfile:
 github "kean/Nuke-Alamofire-Plugin"
 ```
 
-## Requirements
+## Minimum Requirements
 - iOS 9.0 / macOS 10.11 / watchOS 2.0 / tvOS 9.0
-- Xcode 9
-- Swift 4
+- Xcode 9.2
+- Swift 4.0
 
 ## Dependencies
-- [Nuke 7.0-rc1](https://github.com/kean/Nuke)
+- [Nuke 7](https://github.com/kean/Nuke)
 - [Alamofire 4](https://github.com/Alamofire/Alamofire)
 
 ## License
