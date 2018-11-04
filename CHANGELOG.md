@@ -1,5 +1,9 @@
  [Changelog](https://github.com/kean/Nuke-Alamofire-Plugin/releases) for all versions
 
+## Nuke Alamofire Plugin 4.1
+
+- Updated to Swift 4.2
+
 ## Nuke Alamofire Plugin 4.0
 
 - Updated for Nuke  7

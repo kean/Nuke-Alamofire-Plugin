@@ -42,8 +42,8 @@ github "kean/Nuke-Alamofire-Plugin"
 
 ## Minimum Requirements
 - iOS 9.0 / macOS 10.11 / watchOS 2.0 / tvOS 9.0
-- Xcode 9.2
-- Swift 4.0
+- Xcode 10
+- Swift 4.2
 
 ## Dependencies
 - [Nuke 7](https://github.com/kean/Nuke)
