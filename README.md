@@ -12,10 +12,12 @@
 The plugin adds a `DataLoader` class that uses `Alamofire.SessionManager` for networking.
 
 ```swift
-let loader = Nuke.Loader(loader: NukeAlamofirePlugin.AlamofireDataLoader())
-let manager = Nuke.Manager(loader: loader, cache: Cache.shared)
+let pipeline = ImagePipeline {
+    $0.dataLoader = NukeAlamofirePlugin.AlamofireDataLoader()
+    $0.imageCache = ImageCache.shared
+}
 
-manager.loadImage(with: url, into: imageView)
+ImagePipeline.shared = pipeline
 ```
 
 ## Installation
