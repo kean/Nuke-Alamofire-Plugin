@@ -29,7 +29,7 @@ To install plugin add a dependency to your Podfile:
 ```ruby
 # source 'https://github.com/CocoaPods/Specs.git'
 # use_frameworks!
-# platform :ios, "9.0" / :watchos, "2.0" / :osx, "10.11" / :tvos, "9.0"
+# platform :ios, "10.0" / :watchos, "3.0" / :osx, "10.12" / :tvos, "10.0"
 
 pod "Nuke-Alamofire-Plugin"
 ```
@@ -43,9 +43,11 @@ github "kean/Nuke-Alamofire-Plugin"
 ```
 
 ## Minimum Requirements
-- iOS 9.0 / macOS 10.11 / watchOS 2.0 / tvOS 9.0
-- Xcode 10
-- Swift 4.2
+
+| Nuke Alamofire Plugin            | Swift                 | Xcode                | Platforms                                          |
+|----------------------------------|-----------------------|----------------------|----------------------------------------------------|
+| Nuke Alamofire Plugin 4.2        | Swift 4.2 – 5.0       | Xcode 10.1 – 10.2    | iOS 10.0 / macOS 10.12 / watchOS 3.0 / tvOS 10.0   |
+| Nuke Alamofire Plugin 4.1        | Swift 4.0 – 4.2       | Xcode 9.2 – 10.1     | iOS 9.0 / macOS 10.11 / watchOS 2.0 / tvOS 9.0     | 
 
 ## Dependencies
 - [Nuke 7](https://github.com/kean/Nuke)
