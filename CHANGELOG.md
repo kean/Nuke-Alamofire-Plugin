@@ -1,5 +1,12 @@
  [Changelog](https://github.com/kean/Nuke-Alamofire-Plugin/releases) for all versions
 
+## Nuke Alamofire Plugin 4.2
+
+- Add Swift 5.0 support
+- Remove Swift 4.0 and Swift 4.1 support
+- Remove iOS 9, tvOS 9, watchOS 2.0, macOS 10.10 and macOS 10.11 support
+- Add a single `Nuke Alamofire Plugin` target which can build the framework for any platform
+
 ## Nuke Alamofire Plugin 4.1
 
 - Updated to Swift 4.2
