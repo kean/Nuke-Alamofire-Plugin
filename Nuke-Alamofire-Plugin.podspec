@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'Nuke-Alamofire-Plugin'
-    s.version          = '4.2'
+    s.version          = '4.3.0'
     s.summary          = 'Alamofire plugin for Nuke - image loading and caching framework'
 
     s.homepage         = 'https://github.com/kean/Nuke-Alamofire-Plugin'
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
     s.module_name = "NukeAlamofirePlugin"
 
-    s.dependency 'Nuke', '~> 7.0'
+    s.dependency 'Nuke', '~> 8.0'
     s.dependency 'Alamofire', '~> 4.0'
 
     s.source_files  = 'Source/**/*'

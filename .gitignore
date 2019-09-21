@@ -33,3 +33,6 @@ DerivedData
 Cartfile.resolved
 Carthage/Checkouts
 Carthage/Build
+
+
+.swiftpm/
