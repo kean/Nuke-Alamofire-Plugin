@@ -24,7 +24,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'NukeAlamofirePlugin', '~> 4.0' // Or whatever the latest version is
+    pod 'Nuke-Alamofire-Plugin', '~> 4.0' // Or whatever the latest version is
 end
 ```
 
