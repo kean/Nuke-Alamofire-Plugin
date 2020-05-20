@@ -9,7 +9,7 @@
 
 ## Usage
 
-The plugin adds a `DataLoader` class that uses `Alamofire.SessionManager` for networking.
+The plugin adds a `DataLoader` class that uses `Alamofire.Session` for networking.
 
 ```swift
 let pipeline = ImagePipeline {
@@ -28,14 +28,16 @@ Please follow the [Installation Guide](https://github.com/kean/Nuke-Alamofire-Pl
 
 | Nuke Alamofire Plugin            | Swift                 | Xcode                | Platforms                                          |
 |----------------------------------|-----------------------|----------------------|----------------------------------------------------|
-| Nuke Alamofire Plugin 4.3        | Swift 5.0.            | Xcode 11.            | iOS 10.0 / macOS 10.12 / watchOS 3.0 / tvOS 10.0   |
+| Nuke Alamofire Plugin 5.0      | Swift 5.1       | Xcode 11.0      | iOS 11.0 / watchOS 4.0 / macOS 10.13 / tvOS 11.0  |
+| Nuke Alamofire Plugin 4.3        | Swift 5.0            | Xcode 11.0            | iOS 10.0 / macOS 10.12 / watchOS 3.0 / tvOS 10.0   |
 | Nuke Alamofire Plugin 4.2        | Swift 4.2 – 5.0       | Xcode 10.1 – 10.2    | iOS 10.0 / macOS 10.12 / watchOS 3.0 / tvOS 10.0   |
 | Nuke Alamofire Plugin 4.1        | Swift 4.0 – 4.2       | Xcode 9.2 – 10.1     | iOS 9.0 / macOS 10.11 / watchOS 2.0 / tvOS 9.0     | 
 
 ## Dependencies
-- [Nuke 8](https://github.com/kean/Nuke)
-- [Alamofire 4](https://github.com/Alamofire/Alamofire)
+
+- [Nuke 9](https://github.com/kean/Nuke)
+- [Alamofire 5](https://github.com/Alamofire/Alamofire)
 
 ## License
 
-Nuke is available under the MIT license. See the LICENSE file for more info.
+Nuke Alamofire Plugin is available under the MIT license. See the LICENSE file for more info.
