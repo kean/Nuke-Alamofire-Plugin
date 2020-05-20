@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2016-2019 Alexander Grebenyuk (github.com/kean).
+// Copyright (c) 2016-2020 Alexander Grebenyuk (github.com/kean).
 
 import Foundation
 import Alamofire
@@ -8,12 +8,12 @@ import Nuke
 
 /// Implements data loading using Alamofire framework.
 public class AlamofireDataLoader: Nuke.DataLoading {
-    public let manager: Alamofire.SessionManager
+    public let session: Alamofire.Session
 
     /// Initializes the receiver with a given Alamofire.SessionManager.
-    /// - parameter manager: Alamofire.SessionManager.default by default.
-    public init(manager: Alamofire.SessionManager = Alamofire.SessionManager.default) {
-        self.manager = manager
+    /// - parameter session: Alamofire.Session.default by default.
+    public init(session: Alamofire.Session = Alamofire.Session.default) {
+        self.session = session
     }
 
     // MARK: DataLoading
@@ -21,16 +21,33 @@ public class AlamofireDataLoader: Nuke.DataLoading {
     /// Loads data using Alamofire.SessionManager.
     public func loadData(with request: URLRequest, didReceiveData: @escaping (Data, URLResponse) -> Void, completion: @escaping (Error?) -> Void) -> Cancellable {
         // Alamofire.SessionManager automatically starts requests as soon as they are created (see `startRequestsImmediately`)
-        let task = self.manager.request(request)
-        task.stream { [weak task] data in
-            guard let response = task?.response else { return } // Never nil
-            didReceiveData(data, response)
+        let task = self.session.streamRequest(request)
+        task.responseStream { [weak task] stream in
+            switch stream.event {
+            case let .stream(result):
+                switch result {
+                case let .success(data):
+                    guard let response = task?.response else { return } // Never nil
+                    didReceiveData(data, response)
+                }
+            case let .complete(response):
+                completion(response.error)
+            }
         }
-        task.response { response in
-            completion(response.error)
+        return AnyCancellable {
+            task.cancel()
         }
-        return task
     }
 }
 
-extension Alamofire.DataRequest: Nuke.Cancellable {}
+private final class AnyCancellable: Nuke.Cancellable {
+    let closure: () -> Void
+
+    init(_ closure: @escaping () -> Void) {
+        self.closure = closure
+    }
+
+    func cancel() {
+        closure()
+    }
+}

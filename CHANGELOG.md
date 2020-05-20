@@ -1,5 +1,10 @@
  [Changelog](https://github.com/kean/Nuke-Alamofire-Plugin/releases) for all versions
 
+## Nuke Alamofire Plugin 5.0
+
+- Update to Nuke 9 and Alamofire 5
+- Remove iOS 10, tvOS 10, watchOS 3.0, macOS 10.12
+
 ## Nuke Alamofire Plugin 4.2
 
 - Add Swift 5.0 support
