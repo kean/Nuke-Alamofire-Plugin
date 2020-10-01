@@ -48,7 +48,7 @@ $ brew install carthage
 To integrate Nuke into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "kean/NukeAlamofirePlugin" ~> 4.0 // Or whatever the latest version is 
+github "kean/Nuke-Alamofire-Plugin" ~> 5.0 // Or whatever the latest version is 
 ```
 
 Run `carthage update` to build the framework and drag the built `NukeAlamofirePlugin.framework` into your Xcode project along with all of the dependencies.
