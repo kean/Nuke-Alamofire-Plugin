@@ -1,5 +1,11 @@
  [Changelog](https://github.com/kean/Nuke-Alamofire-Plugin/releases) for all versions
 
+## Nuke Alamofire Plugin 5.0.1
+
+Carthage-only update
+
+- Fix Carthage support
+
 ## Nuke Alamofire Plugin 5.0
 
 - Update to Nuke 9 and Alamofire 5
