@@ -17,7 +17,7 @@ ImagePipeline.shared = pipeline
 
 ## Installation
 
-Please follow the [Installation Guide](https://github.com/kean/Nuke-Alamofire-Plugin/blob/master/Documentation/Guides/Installation%20Guide.md)
+Please use Swift Package Manager to install it.
 
 ## Minimum Requirements
 
