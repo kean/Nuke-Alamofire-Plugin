@@ -21,11 +21,10 @@ Please use Swift Package Manager to install it.
 
 ## Minimum Requirements
 
-| Nuke Alamofire Plugin            | Swift                 | Xcode                | Platforms                                          |
-|----------------------------------|-----------------------|----------------------|----------------------------------------------------|
-| Nuke Alamofire Plugin 6.1      | Swift 5.3       | Xcode 12.0      | iOS 12.0 / watchOS 5.0 / macOS 10.14 / tvOS 12.0  |
-| Nuke Alamofire Plugin 6.0      | Swift 5.3       | Xcode 12.0      | iOS 11.0 / watchOS 4.0 / macOS 10.13 / tvOS 11.0  |
-| Nuke Alamofire Plugin 5.0      | Swift 5.1       | Xcode 11.0      | iOS 11.0 / watchOS 4.0 / macOS 10.13 / tvOS 11.0  | 
+| Nuke Alamofire Plugin      | Swift      | Xcode       | Platforms                                      |
+|----------------------------|------------|-------------|------------------------------------------------|
+| Nuke Alamofire Plugin 7.0  | Swift 5.6  | Xcode 13.3  | iOS 13.0, watchOS 6.0, macOS 10.15, tvOS 13.0  |
+| Nuke Alamofire Plugin 6.1  | Swift 5.3  | Xcode 12.0  | iOS 12.0, watchOS 5.0, macOS 10.14, tvOS 12.0  |
 
 ## Dependencies
 
