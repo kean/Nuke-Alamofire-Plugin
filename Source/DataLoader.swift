@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2016-2021 Alexander Grebenyuk (github.com/kean).
+// Copyright (c) 2016-2022 Alexander Grebenyuk (github.com/kean).
 
 import Foundation
 @preconcurrency import Alamofire

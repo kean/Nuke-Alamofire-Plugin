@@ -28,7 +28,7 @@ Please use Swift Package Manager to install it.
 
 ## Dependencies
 
-- [Nuke 10](https://github.com/kean/Nuke)
+- [Nuke 11](https://github.com/kean/Nuke)
 - [Alamofire 5](https://github.com/Alamofire/Alamofire)
 
 ## License
